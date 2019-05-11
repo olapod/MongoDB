@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/nodeappdatabase', { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true});
+mongoose.connect('mongodb+srv://alecs:<Megi$2011>@cluster0-dmjqc.mongodb.net/test?retryWrites=true', { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true});
 
 //new user Schema
 const userSchema = new Schema({
