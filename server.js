@@ -17,7 +17,7 @@ const options = {
 
 const connectWithRetry = () => {
     console.log('MongoDB connection with retry')
-    mongoose.connect("mongodb+srv://alecs:Kalna.187@cluster0-dmjqc.mongodb.net/test?retryWrites=true",
+    mongoose.connect('mongodb+srv://alecs:eEvaPL5Za1eFabPh@cluster0-dmjqc.mongodb.net/test?retryWrites=true',
         options).then(()=>{
         console.log('MongoDB is connected')
     }).catch(err=>{
