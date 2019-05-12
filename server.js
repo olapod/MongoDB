@@ -12,7 +12,8 @@
         // If not connected, return errors immediately rather than waiting for reconnect
         bufferMaxEntries: 0,
         // to eliminate MongoDB Atlas warning
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useFindAndModify: false
     };
     
     const connectWithRetry = () => {
