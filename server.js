@@ -4,7 +4,7 @@
      
     mongoose.Promise = global.Promise;
 
-    http.createServer(onRequest).listen(process.env.PORT || 6000)
+    http.createServer(req).listen(process.env.PORT || 6000)
 
     const options = {
         autoIndex: false, // Don't build indexes
