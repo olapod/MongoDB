@@ -2,29 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://alecs:Kalna$187@cluster0-dmjqc.mongodb.net/test?retryWrites=true', {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+});
 
-const options = {
-    autoIndex: false, // Don't build indexes
-    reconnectTries: 30, // Retry up to 30 times
-    reconnectInterval: 500, // Reconnect every 500ms
-    poolSize: 10, // Maintain up to 10 socket connections
-    // If not connected, return errors immediately rather than waiting for reconnect
-    bufferMaxEntries: 0,
-    // to eliminate MongoDB Atlas warning
-    useNewUrlParser: true
-};
 
-const connectWithRetry = () => {
-    console.log('MongoDB connection with retry')
-    mongoose.connect("mongodb+srv://alecs:Megi$2011@cluster0-b3rha.mongodb.net/test?retryWrites=true", options).then(()=>{
-        console.log('MongoDB is connected')
-    }).catch(err=>{
-        console.log('MongoDB connection unsuccessful, retry after 5 seconds.')
-        setTimeout(connectWithRetry, 5000)
-    })
-};
-
-connectWithRetry();
 //new user Schema
 const userSchema = new Schema({
     name: String,
