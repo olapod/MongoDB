@@ -1,10 +1,11 @@
     const mongoose = require('mongoose');
     const Schema = mongoose.Schema;
-    var http = require('http');
+   
      
     mongoose.Promise = global.Promise;
 
-    http.createServer(req).listen(process.env.PORT || 6000)
+    
+
 
     const options = {
         autoIndex: false, // Don't build indexes
