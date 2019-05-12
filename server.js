@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://alecs:Kalna$187@cluster0-dmjqc.mongodb.net/test?retryWrites=true', {
-    useNewUrlParser: true,
+    // useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true
 });
