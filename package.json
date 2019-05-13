@@ -11,5 +11,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "mongoose": "^5.5.7"
-  }
+  },
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.9.0"
+    }
 }
